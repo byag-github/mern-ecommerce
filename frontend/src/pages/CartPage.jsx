@@ -14,6 +14,12 @@ const CartPage = () => {
 
 	return (
 		<div className="py-8 md:py-16">
+			{cart.length > 0 && (
+				<motion.div className="mx-auto max-w-screen-xl px-4 2xl:px-0 flex items-center justify-center" initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
+					<h1 className="text-4xl font-bold text-indigo-400">Your Cart</h1>
+				</motion.div>
+			)}
+
 			<div className="mx-auto max-w-screen-xl px-4 2xl:px-0">
 				<div className="mt-6 sm:mt-8 md:gap-6 lg:flex lg:items-start xl:gap-8">
 					<motion.div className="mx-auto w-full flex-none lg:max-w-2xl xl:max-w-4xl" initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5, delay: 0.2 }}>
